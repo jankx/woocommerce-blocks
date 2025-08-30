@@ -1,0 +1,19 @@
+{
+    "name": "jankx/woocommerce-blocks",
+    "autoload": {
+		"psr-4": {
+			"Jankx\\WooCommerce\\StoreApi\\": "src/StoreApi/",
+			"Jankx\\WooCommerce\\Blocks\\": "src/"
+		},
+		"files": [
+			"src/bootstrap/bootstrap.php"
+		]
+	},
+    "authors": [
+        {
+            "name": "Puleeno Nguyen",
+            "email": "puleeno@gmail.com"
+        }
+    ],
+    "require": {}
+}
