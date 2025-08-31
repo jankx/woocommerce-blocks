@@ -1,0 +1,22 @@
+/* Editor styles for Jankx Breadcrumbs Block */
+
+.jankx-block-breadcrumbs {
+    /* Tương thích với WooCommerce CSS */
+    margin: 0;
+    padding: 1rem;
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.jankx-block-breadcrumbs-content {
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .jankx-block-breadcrumbs {
+        padding: 0.5rem;
+    }
+}

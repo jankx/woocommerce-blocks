@@ -1,0 +1,78 @@
+/* Editor styles for Jankx ProductOnSale Block */
+
+.jankx-block-product-on-sale {
+    /* Tương thích với WooCommerce CSS */
+    margin: 0;
+    padding: 0;
+}
+
+.jankx-block-product-on-sale .wc-block-grid__products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jankx-block-product-on-sale .wc-block-grid__product {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.jankx-block-product-on-sale .wc-block-grid__product-image {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.jankx-block-product-on-sale .wc-block-grid__product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.jankx-block-product-on-sale .onsale {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4444;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.jankx-block-product-on-sale .wc-block-grid__product-title {
+    margin-bottom: 0.5rem;
+}
+
+.jankx-block-product-on-sale .wc-block-grid__product-title a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.jankx-block-product-on-sale .wc-block-grid__product-price {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.jankx-block-product-on-sale .wc-block-grid__product-add-to-cart {
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .jankx-block-product-on-sale .wc-block-grid__products {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .jankx-block-product-on-sale .wc-block-grid__product {
+        padding: 0.5rem;
+    }
+}

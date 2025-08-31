@@ -1,9 +1,12 @@
 {
     "name": "jankx/woocommerce-blocks",
+    "description": "WooCommerce Blocks for Jankx Framework - Fork and extension of WooCommerce Blocks",
+    "type": "library",
+    "version": "1.0.0",
     "autoload": {
 		"psr-4": {
-			"Jankx\\WooCommerce\\StoreApi\\": "src/StoreApi/",
-			"Jankx\\WooCommerce\\Blocks\\": "src/"
+			"Jankx\\WooCommerce\\Blocks\\": "src/",
+			"Automattic\\WooCommerce\\Blocks\\": "woocommerce-blocks-trunk/src/"
 		},
 		"files": [
 			"src/bootstrap/bootstrap.php"
@@ -16,5 +19,23 @@
             "email": "puleeno@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=7.4",
+        "composer/installers": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "minimum-stability": "stable",
+    "keywords": [
+        "wordpress",
+        "woocommerce",
+        "gutenberg",
+        "blocks",
+        "jankx"
+    ],
+    "support": {
+        "issues": "https://github.com/jankx/woocommerce-blocks/issues",
+        "source": "https://github.com/jankx/woocommerce-blocks"
+    }
 }

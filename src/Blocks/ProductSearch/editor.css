@@ -1,0 +1,22 @@
+/* Editor styles for Jankx ProductSearch Block */
+
+.jankx-block-product-search {
+    /* Tương thích với WooCommerce CSS */
+    margin: 0;
+    padding: 1rem;
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.jankx-block-product-search-content {
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .jankx-block-product-search {
+        padding: 0.5rem;
+    }
+}
