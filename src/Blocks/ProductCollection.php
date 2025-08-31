@@ -1,6 +1,6 @@
 <?php
 
-namespace Automattic\WooCommerce\Blocks\BlockTypes;
+namespace Jankx\WooCommerce\Blocks;
 
 use WP_Query;
 

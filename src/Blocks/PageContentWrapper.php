@@ -1,5 +1,5 @@
 <?php
-namespace Automattic\WooCommerce\Blocks\BlockTypes;
+namespace Jankx\WooCommerce\Blocks;
 
 /**
  * Used in templates to wrap page content. Allows content to be populated at template level.

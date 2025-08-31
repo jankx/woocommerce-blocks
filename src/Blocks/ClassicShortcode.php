@@ -1,5 +1,5 @@
 <?php
-namespace Automattic\WooCommerce\Blocks\BlockTypes;
+namespace Jankx\WooCommerce\Blocks;
 
 use WC_Shortcode_Cart;
 use WC_Shortcode_Checkout;

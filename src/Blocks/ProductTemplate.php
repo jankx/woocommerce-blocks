@@ -1,6 +1,6 @@
 <?php
 
-namespace Automattic\WooCommerce\Blocks\BlockTypes;
+namespace Jankx\WooCommerce\Blocks;
 
 use Automattic\WooCommerce\Blocks\Utils\ProductCollectionUtils;
 use WP_Block;

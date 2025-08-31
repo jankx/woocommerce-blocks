@@ -1,5 +1,5 @@
 <?php
-namespace Automattic\WooCommerce\Blocks\BlockTypes;
+namespace Jankx\WooCommerce\Blocks;
 
 use WP_Query;
 use Automattic\WooCommerce\Blocks\Utils\Utils;

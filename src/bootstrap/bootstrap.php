@@ -205,5 +205,7 @@ class Bootstrap {
     }
 }
 
-// Initialize the plugin
-Bootstrap::init();
+if (defined('FIX_BUG') && FIX_BUG) {
+    // Initialize the plugin
+    Bootstrap::init();
+}

@@ -1,5 +1,5 @@
 <?php
-namespace Automattic\WooCommerce\Blocks\BlockTypes;
+namespace Jankx\WooCommerce\Blocks;
 
 use Automattic\WooCommerce\Blocks\InteractivityComponents\Dropdown;
 
@@ -112,12 +112,12 @@ final class CollectionStockFilter extends AbstractBlock {
 							<li>
 								<div class="wc-block-components-checkbox wc-block-checkbox-list__checkbox">
 									<label for="<?php echo esc_attr( $stock_count['status'] ); ?>">
-										<input 
-											id="<?php echo esc_attr( $stock_count['status'] ); ?>" 
-											class="wc-block-components-checkbox__input" 
-											type="checkbox" 
-											aria-invalid="false" 
-											data-wc-on--change="actions.updateProducts" 
+										<input
+											id="<?php echo esc_attr( $stock_count['status'] ); ?>"
+											class="wc-block-components-checkbox__input"
+											type="checkbox"
+											aria-invalid="false"
+											data-wc-on--change="actions.updateProducts"
 											value="<?php echo esc_attr( $stock_count['status'] ); ?>"
 											<?php checked( strpos( $selected_stock_status, $stock_count['status'] ) !== false, 1 ); ?>
 										>

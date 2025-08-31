@@ -1,5 +1,5 @@
 <?php
-namespace Automattic\WooCommerce\Blocks\BlockTypes;
+namespace Jankx\WooCommerce\Blocks;
 
 use Automattic\WooCommerce\Blocks\Package;
 use Automattic\WooCommerce\Blocks\Payments\PaymentMethodRegistry;
@@ -150,17 +150,16 @@ class MiniCart extends AbstractBlock {
 
 		$this->asset_data_registry->add(
 			'displayCartPricesIncludingTax',
-			$this->display_cart_prices_including_tax,
-			true
+			$this->display_cart_prices_including_tax
 		);
 
 		$template_part_edit_uri = '';
 
 		if (
 			current_user_can( 'edit_theme_options' ) &&
-			( wc_current_theme_is_fse_theme() || current_theme_supports( 'block-template-parts' ) )
+			( wp_is_block_theme() || current_theme_supports( 'block-template-parts' ) )
 		) {
-			$theme_slug = BlockTemplateUtils::theme_has_template_part( 'mini-cart' ) ? wp_get_theme()->get_stylesheet() : BlockTemplateUtils::PLUGIN_SLUG;
+			$theme_slug = wp_get_theme()->get_stylesheet();
 
 			if ( version_compare( get_bloginfo( 'version' ), '5.9', '<' ) ) {
 				$site_editor_uri = add_query_arg(
@@ -190,8 +189,7 @@ class MiniCart extends AbstractBlock {
 
 		$this->asset_data_registry->add(
 			'templatePartEditUri',
-			$template_part_edit_uri,
-			''
+			$template_part_edit_uri
 		);
 
 		/**
@@ -457,10 +455,9 @@ class MiniCart extends AbstractBlock {
 		if ( is_countable( $templates_from_db ) && count( $templates_from_db ) > 0 ) {
 			$template_slug_to_load = $templates_from_db[0]->theme;
 		} else {
-			$theme_has_mini_cart   = BlockTemplateUtils::theme_has_template_part( 'mini-cart' );
-			$template_slug_to_load = $theme_has_mini_cart ? get_stylesheet() : BlockTemplateUtils::PLUGIN_SLUG;
+			$template_slug_to_load = get_stylesheet();
 		}
-		$template_part = BlockTemplateUtils::get_block_template( $template_slug_to_load . '//mini-cart', 'wp_template_part' );
+		$template_part = get_block_template( $template_slug_to_load . '//mini-cart', 'wp_template_part' );
 
 		if ( $template_part && ! empty( $template_part->content ) ) {
 			$template_part_contents = do_blocks( $template_part->content );
@@ -469,7 +466,7 @@ class MiniCart extends AbstractBlock {
 		if ( '' === $template_part_contents ) {
 			$template_part_contents = do_blocks(
 				// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-				file_get_contents( Package::get_path() . 'templates/' . BlockTemplateUtils::DIRECTORY_NAMES['TEMPLATE_PARTS'] . '/mini-cart.html' )
+				file_get_contents( Package::get_path() . 'templates/template-parts/mini-cart.html' )
 			);
 		}
 
